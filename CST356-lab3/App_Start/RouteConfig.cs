@@ -13,12 +13,9 @@ namespace CST356_lab3
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
-            routes.MapRoute(
-                        name: "ClassesListCreate",
-                        url: "{controller}/{action}/{userId}"
-                    );
-           
+            routes.MapMvcAttributeRoutes();
 
+            
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",

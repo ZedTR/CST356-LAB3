@@ -68,6 +68,8 @@ namespace CST320_lab2.Controllers
 
             return View(users);
         }
+
+       
         public ActionResult Details(int id)
         {
             
