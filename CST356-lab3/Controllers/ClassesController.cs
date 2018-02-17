@@ -48,11 +48,11 @@ namespace CST356_lab3.Controllers
             return RedirectToAction("List", new { UserId = Class.UserId });
         }
 
-        private Classes GetClass(int petId)
+        private Classes GetClass(int cId)
         {
             var dbContext = new AppDb();
 
-            return dbContext.Classes.Find(petId);
+            return dbContext.Classes.Find(cId);
         }
 
         private ICollection<ViewClassesModel> GetClassForUser(int userId)
@@ -65,7 +65,7 @@ namespace CST356_lab3.Controllers
 
             foreach (var Class in classes)
             {
-                var ClassViewModel = MapToPetViewModel(Class);
+                var ClassViewModel = MapToClassViewModel(Class);
                 ViewModels.Add(ClassViewModel);
             }
 
@@ -76,7 +76,7 @@ namespace CST356_lab3.Controllers
         {
             var dbContext = new AppDb();
 
-            var Class = MapToPet(ClassViewModel);
+            var Class = MapToClass(ClassViewModel);
 
             dbContext.Classes.Add(Class);
 
@@ -96,7 +96,7 @@ namespace CST356_lab3.Controllers
             }
         }
 
-        private Classes MapToPet(ViewClassesModel ViewModel)
+        private Classes MapToClass(ViewClassesModel ViewModel)
         {
             return new Classes
             {
@@ -108,7 +108,7 @@ namespace CST356_lab3.Controllers
             };
         }
 
-        private ViewClassesModel MapToPetViewModel(Classes Class)
+        private ViewClassesModel MapToClassViewModel(Classes Class)
         {
             return new ViewClassesModel
             {
