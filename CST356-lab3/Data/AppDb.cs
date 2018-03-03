@@ -26,6 +26,8 @@ namespace CST356_lab3.Data
         public System.Data.Entity.DbSet<CST356_lab3.ViewModel.ViewUserModel> ViewUserModels { get; set; }
 
         public System.Data.Entity.DbSet<CST356_lab3.ViewModel.ViewClassesModel> ViewClassesModels { get; set; }
+
+        public System.Data.Entity.DbSet<CST356_lab3.Data.Entities.BootStrap> BootStraps { get; set; }
     }
     public class AppDbInitializer : DropCreateDatabaseIfModelChanges<AppDb>
     {

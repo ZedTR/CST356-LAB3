@@ -148,10 +148,12 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\BootStrapController.cs" />
     <Compile Include="Controllers\ClassesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Data\AppDb.cs" />
+    <Compile Include="Data\Entities\BootStrap.cs" />
     <Compile Include="Data\Entities\Classes.cs" />
     <Compile Include="Data\Entities\User.cs" />
     <Compile Include="Global.asax.cs">
@@ -213,6 +215,7 @@
     <Content Include="Views\User\Details.cshtml" />
     <Content Include="Views\Classes\List.cshtml" />
     <Content Include="Views\Classes\Create.cshtml" />
+    <Content Include="Views\BootStrap\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
